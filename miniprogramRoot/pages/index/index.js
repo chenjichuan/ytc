@@ -65,9 +65,12 @@ Page({
             }
             break;
           case 2:
-            // 多个角色。默认车库主
-            wx.redirectTo({
-              url: '../owner/owner'
+            // 多个角色。
+            // wx.redirectTo({
+            //   url: '../owner/owner'
+            // })
+            wx.switchTab({
+              url: '/pages/location/location'
             })
             break;
           default:

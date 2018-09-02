@@ -81,7 +81,7 @@ Page({
     const {role, userId} = app.globalData
     if (role.length > 1) {
       wx.reLaunch({
-        url: '../index/index'
+        url: '../owner/owner'
       })
     } else {
       const params = {
@@ -99,8 +99,9 @@ Page({
       this.cloudCall(params, () => {
         wx.hideLoading()
         wx.reLaunch({
-          url: '../index/index'
+          url: '../owner/owner'
         })
+
       })
 
     }

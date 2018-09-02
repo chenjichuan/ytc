@@ -15,8 +15,8 @@ Page({
   handleClick() {
     const {role, userId} = app.globalData
     if (role.length > 1) {
-      wx.reLaunch({
-        url: '../index/index'
+      wx.switchTab({
+        url: '/pages/location/location'
       })
     } else {
       const params = {
@@ -33,8 +33,8 @@ Page({
       })
       this.cloudCall(params, () => {
         wx.hideLoading()
-        wx.reLaunch({
-          url: '../index/index'
+        wx.switchTab({
+          url: '/pages/location/location'
         })
       })
 
