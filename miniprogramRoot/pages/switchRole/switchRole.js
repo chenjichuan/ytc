@@ -6,9 +6,7 @@ Page({
   /**
    * 页面的初始数据
    */
-  data: {
-
-  },
+  data: {},
   /**
    * 生命周期函数--监听页面加载
    */
@@ -30,7 +28,7 @@ Page({
       cb && cb(res)
     })
   },
-  handleClick (e) {
+  handleClick(e) {
     console.log(e)
     const userId = app.globalData.userId
     console.log(userId)
@@ -45,14 +43,6 @@ Page({
           roleId: 'ytc_01' // 车库主id
         }
       }
-     this.cloudCall(params, (res) => {
-        console.log(res)
-      })
-
-      //
-      // wx.navigateTo({
-      //   url: '../owner/owner'
-      // })
     } else {
       params = {
         scope: 'role',
@@ -63,19 +53,21 @@ Page({
           roleId: 'ytc_02' // 车主id
         }
       }
-
-
-      // wx.showLoading({
-      //   success() {
-      //     wx.switchTab({
-      //       url: '/pages/location/location'
-      //     })
-      //   }
-      // })
     }
-
+    wx.showLoading({
+      title: '',
+    })
     this.cloudCall(params, (res) => {
-      console.log(res)
+      wx.hideLoading()
+      if (e.target.id === 'owner') {
+        wx.reLaunch({
+          url: '../owner/owner'
+        })
+      } else {
+        wx.switchTab({
+          url: '/pages/location/location'
+        })
+      }
     })
   }
 })
