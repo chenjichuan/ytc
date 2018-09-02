@@ -1,4 +1,0 @@
-<view class="siwtch-role">
-    <i-button id="owner" bind:click="handleClick" type="success" shape="circle" size="small">我有车位</i-button>
-    <i-button id="user" bind:click="handleClick" type="success" shape="circle" size="small">我要停车</i-button>
-</view>

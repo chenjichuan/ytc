@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "易停车",
+  "usingComponents": {
+    "i-panel": "../../component/panel/index",
+    "i-button": "../../component/button/index"
+  }
+}

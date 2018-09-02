@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "地图",
-  "usingComponents": {
-    "i-button": "../../component/button/index"
-  }
-}

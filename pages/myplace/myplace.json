@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "我的车位",
-  "usingComponents": {
-    "i-card": "../../component/card/index"
-  }
-}

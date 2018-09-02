@@ -1,8 +1,0 @@
-<!--pages/edit/edit.wxml-->
-<i-panel title="">
-    <!--<i-input value="{{ value1 }}" title="昵称" autofocus placeholder="请输入昵称" />-->
-    <i-input value="{{ value2 }}" type="number" title="联系电话" placeholder="请输入手机号" />
-    <i-input value="{{ value2 }}" type="text" title="车牌号" placeholder="请输入车牌号" />
-</i-panel>
-<i-button bind:click="handleClick" type="success" shape="circle" size="large">确认</i-button>
-

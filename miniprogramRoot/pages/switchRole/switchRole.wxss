@@ -1,0 +1,9 @@
+/* pages/switchRole/switchRole.wxss */
+.siwtch-role {
+  position: relative;
+  padding-top: 300rpx;
+}
+#owner {
+}
+#user {
+}
