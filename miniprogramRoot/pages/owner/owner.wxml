@@ -27,7 +27,7 @@
                   data-name="{{item.name}}"
                   class="weui-cell" hover-class="weui-cell_active">
                 <view class="weui-cell__bd">
-                    <view class="name">{{item.name}}</view>
+                    <view class="name">{{item.name}} （{{item.price}}元/小时）</view>
                     <view class="address">{{item.address}}</view>
                 </view>
             </view>
