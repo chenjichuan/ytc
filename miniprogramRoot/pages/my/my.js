@@ -1,5 +1,6 @@
-// pages/my/my.js
 const app = getApp()
+wx.cloud.init()
+const db = wx.cloud.database()
 Page({
 
   /**
@@ -14,12 +15,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    if (app.globalData.userInfo) {
-      this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
-      })
-    }
+    const {role} = app.globalData
+    console.log(role)
   },
 
   /**
@@ -70,10 +67,42 @@ Page({
   onShareAppMessage: function () {
 
   },
-
-  handleClick() {
-    wx.reLaunch({
-      url: '../owner/owner'
+  cloudCall(params, cb) {
+    wx.cloud.callFunction({
+      // 云函数名称
+      name: 'insertDataBase',
+      // 传给云函数的参数
+      data: params,
+    }).then(res => {
+      cb && cb(res)
     })
+  },
+  handleClick() {
+    const {role, userId} = app.globalData
+    if (role.length > 1) {
+      wx.reLaunch({
+        url: '../index/index'
+      })
+    } else {
+      const params = {
+        scope: 'role',
+        packages: {
+          userId,
+          active: 'true',
+          roleName: 'owner',
+          roleId: 'ytc_01' // 车库主id
+        }
+      }
+      wx.showLoading({
+        title: '切换中',
+      })
+      this.cloudCall(params, () => {
+        wx.hideLoading()
+        wx.reLaunch({
+          url: '../index/index'
+        })
+      })
+
+    }
   }
 })

@@ -1,4 +1,4 @@
-<view style="margin: 16px">XX小区</view>
+<view style="margin: 16px">{{placeName}}</view>
 <i-card title="车位1" extra="使用中" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
     <view slot="content">三号楼地下一层</view>
     <view slot="footer">预计下午5点使用结束</view>
@@ -8,3 +8,7 @@
     <view slot="content">三号楼地下二层</view>
     <view slot="footer">可预约</view>
 </i-card>
+
+
+
+<i-button bind:click="handleClick">我要停车</i-button>

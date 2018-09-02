@@ -3,6 +3,8 @@
   "usingComponents": {
     "i-panel": "../../component/panel/index",
     "i-input": "../../component/input/index",
+    "i-message": "../../component/message/index",
+    "i-toast": "../../component/toast/index",
     "i-button": "../../component/button/index"
   }
 }

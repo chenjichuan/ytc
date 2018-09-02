@@ -1,7 +1,7 @@
 <!--index.wxml-->
 <view class="container">
   <view class="userinfo">
-    <div  class="userinfo-avatar">
+    <div  class="userinfo-avatar" bindclick="clickHandle">
       <open-data type="userAvatarUrl"></open-data>
     </div>
     <open-data type="userNickName" lang="zh_CN"></open-data>

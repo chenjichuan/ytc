@@ -42,18 +42,6 @@ Page({
             }
           })
         })
-        // markers.push({
-        //   id: 'test',
-        //   iconPath: '/images/location.png',
-        //   longitude: Number(me.data.longitude),
-        //   latitude: Number(me.data.latitude),
-        //   // callout:  {
-        //   //   content: '位置' + i
-        //   // },
-        //   label: {
-        //     content: '测试'
-        //   }
-        // })
         me.setData({markers})
       })
   },

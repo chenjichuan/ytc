@@ -5,6 +5,14 @@
 			{
 				"type": "file",
 				"value": ".gitignore"
+			},
+			{
+				"type": "folder",
+				"value": ".idea"
+			},
+			{
+				"type": "suffix",
+				"value": ".idea"
 			}
 		]
 	},

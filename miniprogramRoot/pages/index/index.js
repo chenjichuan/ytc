@@ -16,6 +16,8 @@ Page({
       url: '../location/location'
     })
   },
+  clickHandle() {
+  },
   onLoad: function () {
     const me = this
     wx.getUserInfo({
@@ -43,11 +45,11 @@ Page({
       db.collection('role').where({
         userId
       }).get().then(res => {
-        console.log(res.data)
         const data = res.data
+        app.globalData.role = data
         switch (res.data.length) {
           case 0: // 没有角色，新用户
-            wx.navigateTo({
+            wx.redirectTo({
               url: '../switchRole/switchRole'
             })
             break;
@@ -64,7 +66,7 @@ Page({
             break;
           case 2:
             // 多个角色。默认车库主
-            wx.navigateTo({
+            wx.redirectTo({
               url: '../owner/owner'
             })
             break;
