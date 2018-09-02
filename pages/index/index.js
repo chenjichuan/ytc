@@ -19,7 +19,7 @@ Page({
   onLoad: function () {
     const me = this
     wx.getUserInfo({
-      success: function(res) {
+      success: function (res) {
         // 拿到用户信息需要的话更新数据库
         me.setUserInfo(res.userInfo)
       }
@@ -45,15 +45,21 @@ Page({
       }).get().then(res => {
         console.log(res.data)
         const data = res.data
-        switch (res.data.length){
+        switch (res.data.length) {
           case 0: // 没有角色，新用户
             wx.navigateTo({
               url: '../switchRole/switchRole'
             })
             break;
           case 1:
-            if(data.roleId) {
-
+            if (data[0].roleId === 'ytc_01') {
+              wx.navigateTo({
+                url: '../owner/owner'
+              })
+            } else if (data[0].roleId === 'ytc_02') {
+              wx.switchTab({
+                url: '/pages/location/location'
+              })
             }
             break;
           case 2:
@@ -62,7 +68,8 @@ Page({
               url: '../owner/owner'
             })
             break;
-          default: break;
+          default:
+            break;
         }
       })
     })
