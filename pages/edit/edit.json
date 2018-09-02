@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "编辑个人信息",
+  "usingComponents": {
+    "i-panel": "../../component/panel/index",
+    "i-input": "../../component/input/index",
+    "i-button": "../../component/button/index"
+  }
+}

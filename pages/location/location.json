@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "附近可用",
+  "usingComponents": {
+    "i-button": "../../component/button/index"
+  }
+}

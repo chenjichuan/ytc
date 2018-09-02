@@ -1,0 +1,21 @@
+/* pages/my/my.wxss */
+.cell-panel-my {
+  display: block;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding:40rpx 40rpx;
+}
+.header span{
+  font-size:32px;
+  font-weight:600;
+  vertical-align: middle;
+  line-height: 128rpx;
+}
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  border-radius:50%;
+  overflow: hidden;
+}
