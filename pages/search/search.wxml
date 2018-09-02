@@ -21,31 +21,14 @@
             <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
         </view>
         <view class="weui-cells searchbar-result" wx:if="{{inputVal.length > 0}}">
-            <view bindtap="taphandler"
-                  data-latitude="39.95933"
-                  data-longitude="116.29845"
-                  data-name="XX小区"
+            <view bindtap="taphandler" wx:for="{{allmaps}}" wx:key="{{item._id}}"
+                  data-latitude="{{item.latitude}}"
+                  data-longitude="{{item.longitude}}"
+                  data-name="{{item.name}}"
                   class="weui-cell" hover-class="weui-cell_active">
                 <view class="weui-cell__bd">
-                    <view>XX小区 剩余3车位（5元/小时）</view>
-                </view>
-            </view>
-            <view bindtap="taphandler"
-                  data-latitude="39.95933"
-                  data-longitude="116.29845"
-                  data-name="XX高档小区"
-                  class="weui-cell" hover-class="weui-cell_active">
-                <view class="weui-cell__bd">
-                    <view>XX高档小区 剩余130车位（7元/小时）</view>
-                </view>
-            </view>
-            <view bindtap="taphandler"
-                  data-latitude="39.95933"
-                  data-longitude="116.29845"
-                  data-name="XX豪华小区"
-                  class="weui-cell" hover-class="weui-cell_active">
-                <view class="weui-cell__bd">
-                    <view>XX豪华小区 车位充足 （8元/小时）</view>
+                    <view class="name">{{item.name}}</view>
+                    <view class="address">{{item.address}}</view>
                 </view>
             </view>
         </view>

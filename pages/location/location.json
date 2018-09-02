@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "附近可用",
+  "navigationBarTitleText": "地图",
   "usingComponents": {
     "i-button": "../../component/button/index"
   }

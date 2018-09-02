@@ -1,8 +1,14 @@
-var app=getApp();
+var app = getApp();
 Page({
   data: {
     inputShowed: false,
-    inputVal: ""
+    inputVal: "",
+    allmaps: []
+  },
+  onLoad() {
+    this.setData({
+      allmaps: app.globalData.allmaps
+    })
   },
   showInput: function () {
     this.setData({
