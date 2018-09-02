@@ -12,6 +12,16 @@ Page({
       placeName: con.name
     })
   },
+  cloudCall(params, cb) {
+    wx.cloud.callFunction({
+      // 云函数名称
+      name: 'insertDataBase',
+      // 传给云函数的参数
+      data: params,
+    }).then(res => {
+      cb && cb(res)
+    })
+  },
   handleClick() {
     const {role, userId} = app.globalData
     if (role.length > 1) {
