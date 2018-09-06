@@ -76,6 +76,11 @@ Page({
           default:
             break;
         }
+        if(res.data.length>2) {
+          wx.switchTab({
+            url: '/pages/location/location'
+          })
+        }
       })
     })
   }
